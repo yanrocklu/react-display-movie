@@ -1,19 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Movie from './components/movie';
-import loadMovies from './movie';
+import Header from './components/Header';
+import MovieContainer from './containers/MovieContainer';
 
 function App() {
-  const movieArray = loadMovies;
-  const movieList = movieArray.map(movie => {
-    return <Movie movie={movie} />
-  });
+  const title = 'React Movie Tiles';
 
   return (
     <div>
-      <h1>Movie List</h1>
-      {movieList}
+      <Header title={title}/>
+      <MovieContainer />
     </div>
   );
 }
