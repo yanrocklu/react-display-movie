@@ -16,6 +16,7 @@ class MovieContainer extends Component {
   componentDidMount() {
     // const proxyurl = "https://cors-anywhere.herokuapp.com/";
     const movieJsonUrl = 'https://github.com/yanrocklu/react-display-movie/blob/master/src/services/movie.json';
+    // const movieJsonUrl = 'https://github.com/yanrocklu/react-display-movie/blob/master/src/services/movie.js';
     console.log(movieJsonUrl);
     // this.setState(() => ({
     //   movies: DataService.getMovies()
@@ -30,7 +31,10 @@ class MovieContainer extends Component {
     //   })
     // console.log(this.state.movies);
 
-    axios.get(movieJsonUrl, { crossdomain: true })
+    axios.get(movieJsonUrl, { 
+      crossdomain: true,
+      headers: {"Access-Control-Allow-Origin": "*"} 
+    })
       .then(response => {
         console.log('response: ' + JSON.stringify(response));
         return response.data
