@@ -3,8 +3,8 @@ import MovieTile from './MovieTile';
 import './MovieList.css';
 
 const MovieList = (props) => {
-  const movieList = props.movies.map(movie => {
-    return <MovieTile movie={movie} />
+  const movieList = props.movies.map((movie, index) => {
+    return <MovieTile movie={movie} key={index}/>
   });
 
   return (

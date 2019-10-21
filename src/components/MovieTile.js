@@ -2,7 +2,6 @@ import React from 'react';
 import './MovieTile.css';
 
 const MovieTile = (props) => {
-  console.log(props);
   const movie = props.movie;
 
   // the poster img url in the json file are http, which will cause a '403 ERROR'.
