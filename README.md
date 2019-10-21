@@ -10,8 +10,7 @@ https://yanrocklu.github.io/react-display-movie/
 
 This is a React web application that displays movies as a list of tiles. Each tile displays movie detail such as title, actors, description, poster.
 
-The application uses 2 levels deep nested components;
-
+The application uses 2 levels nested components:
 * Header - A header that displays app title
 * MovieContainer - The root conrainer component that manages state for all children components. It is uses _axio_ to connect to Firebase database.
 * MovieList - A list of movies
