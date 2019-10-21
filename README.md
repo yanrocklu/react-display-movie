@@ -1,6 +1,6 @@
 # React Movie Tiles
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with *Create React App*.
 
 ### Link To the Live Demo
 
@@ -13,15 +13,11 @@ This is a React web application that displays movies as a list of tiles. Each ti
 The application uses 2 levels deep nested components;
 
 * Header - A header that displays app title
-
 * MovieContainer - The root conrainer component that manages state for all children components. It is uses _axio_ to connect to Firebase database.
-
 * MovieList - A list of movies
-
 * MovieTile - A tile to dispaly movie details
 
 **Axios**, a Promise based HTTP client is used to obtain movie data:
-
 * axios-movies - A axios instance that retrieves movie data from Firebase.
 
 **Firebase**, a NoSQL database is used to store the JSON style data
@@ -75,7 +71,7 @@ Follow the following steps to get development environment running.
 
 * Run start
 
-  This will run the _'serve'_ npm task
+  This will start your app
 
   ```bash
   npm start
