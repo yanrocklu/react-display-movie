@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import DataService from '../services/DataService';
 import MovieList from '../components/MovieList';
-import axios from 'axios';
+import axios from '../services/axios-movies';
 
 
 class MovieContainer extends Component {
@@ -15,9 +15,9 @@ class MovieContainer extends Component {
 
   componentDidMount() {
     // const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    const movieJsonUrl = 'https://github.com/yanrocklu/react-display-movie/blob/master/src/services/movie.json';
+    // const movieJsonUrl = 'https://github.com/yanrocklu/react-display-movie/blob/master/src/services/movie.json';
+    const movieJsonUrl = 'https://react-display-movie.firebaseio.com/react-display-movie.json';
     // const movieJsonUrl = 'https://github.com/yanrocklu/react-display-movie/blob/master/src/services/movie.js';
-    console.log(movieJsonUrl);
     // this.setState(() => ({
     //   movies: DataService.getMovies()
     // })
@@ -31,19 +31,16 @@ class MovieContainer extends Component {
     //   })
     // console.log(this.state.movies);
 
-    axios.get(movieJsonUrl, { 
-      crossdomain: true,
-      headers: {"Access-Control-Allow-Origin": "*"} 
-    })
+    axios.get(movieJsonUrl)
       .then(response => {
-        console.log('response: ' + JSON.stringify(response));
-        return response.data
+        console.log(response);
+        return response.data;
       })
       .then((data) => {
-        console.log('data: ' + data);
-
-        this.setState({ movies: data })
+        data && this.setState({ movies: data })
         console.log(this.state.movies)
+      }, error => {
+        console.log(error);
       })
   }
 
