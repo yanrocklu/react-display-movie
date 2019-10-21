@@ -1,8 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # React Movie Tiles
 
-A web application that displays movies as a list of tiles. Each tiles displays movie detail such as title, actors, description, poster.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+A web application that displays movies as a list of tiles. Each tile displays movie detail such as title, actors, description, poster.
 
 ### Link To the Live Demo
 
@@ -16,26 +16,23 @@ The application is composed of the following components:
 
 * Header - A header that displays app title
 
-* MovieContainer - The root component that manages state for all children components. It is also responsible for connecting to _MovieService_ to retrieve movie data
+* MovieContainer - The root conrainer component that manages state for all children components. It is uses _axio_ to connect to Firebase database.
 
 * MovieList - A list of movies
 
 * MovieTile - A tile to dispaly movie details
 
-**Firebase** database is used to store the JSON style data
-
 **Axios**, a Promise based HTTP client is used to obtain movie data:
 
 * axios-movies - A axios instance that retrieves movie data from Firebase.
 
-For styling, I have adopted bootstrap4 beta. I use SCSS for all custom written styles.
+**Firebase**, a NoSQL database is used to store the JSON style data
 
-## Developed With
+### Developed With
 
 * [Node.js](https://nodejs.org/en/) - Javascript runtime
 * [React](https://reactjs.org/) - A javascript library for building user interfaces
 * [Babel](https://babeljs.io/) - A transpiler for javascript
-* [SCSS](http://sass-lang.com/) - A css metalanguage
 * [Firebase](https://firebase.google.com//) - A NoSQL database
 * [Axios](https://www.axios.com//) - A HTTP client
 
