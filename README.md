@@ -4,13 +4,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Link To the Live Demo
 
-<a href="https://yanrocklu.github.io/react-display-movie/" target="blank">https://yanrocklu.github.io/react-display-movie/</a>
+https://yanrocklu.github.io/react-display-movie/
 
 ### Project Introduction
 
 This is a React web application that displays movies as a list of tiles. Each tile displays movie detail such as title, actors, description, poster.
 
-The application uses 2 levels deep nested components:
+The application uses 2 levels deep nested components;
 
 * Header - A header that displays app title
 
