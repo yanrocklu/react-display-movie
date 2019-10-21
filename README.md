@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Link To the Live Demo
 
-https://yanrocklu.github.io/react-display-movie/
+<a href="https://yanrocklu.github.io/react-display-movie/" target="blank">https://yanrocklu.github.io/react-display-movie/</a>
 
 ### Project Introduction
 
