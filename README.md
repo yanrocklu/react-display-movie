@@ -29,8 +29,8 @@ The application uses 2 levels nested components:
 * [React](https://reactjs.org/) - A javascript library for building user interfaces
 * [Babel](https://babeljs.io/) - A transpiler for javascript
 * [Firebase](https://firebase.google.com//) - A NoSQL database
-* [Axios](https://www.axios.com//) - A HTTP client
-* [Flex](https://www.axios.com//) - A HTTP client
+* [Axios](https://www.axios.com/) - A HTTP client
+* [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp/) - CSS Flexbox Layout Module
 
 ---
 
