@@ -21,6 +21,8 @@ The application uses 2 levels nested components:
 
 **Firebase**, a NoSQL database is used to store the JSON style data
 
+**Flexbox**, the Flexible Box Layout Module is used to design flexible responsive layout structure.
+
 ### Developed With
 
 * [Node.js](https://nodejs.org/en/) - Javascript runtime
@@ -28,6 +30,7 @@ The application uses 2 levels nested components:
 * [Babel](https://babeljs.io/) - A transpiler for javascript
 * [Firebase](https://firebase.google.com//) - A NoSQL database
 * [Axios](https://www.axios.com//) - A HTTP client
+* [Flex](https://www.axios.com//) - A HTTP client
 
 ---
 
