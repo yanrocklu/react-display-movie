@@ -38,6 +38,15 @@ class App extends Component {
       })
   }
 
+  /*   
+    React Router paths don’t match after deploying to GitHub Pages
+    To solve this:
+    In the <Router>, have to use 
+    <Route path={`${process.env.PUBLIC_URL}/about`} component={About}></Route>
+    instead of 
+    <Route path="/about" component={About}></Route> 
+    */
+
   render() {
     const title = 'React Movie Posters';
     const movies = this.state.movies;
@@ -45,7 +54,7 @@ class App extends Component {
       <Router>
         <Header title={title} />
         <Route
-          path="/"
+          path={`${process.env.PUBLIC_URL}/`}
           render={({ location }) => (
             <Fragment>
               <Tabs value={location.pathname}>
@@ -54,13 +63,13 @@ class App extends Component {
                 <Tab label="Movie Select List" component={Link} to="/list" value="/list" />
               </Tabs>
               <Switch>
-                <Route exact path='/' component={Home} />
+                <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
                 <Route
-                  path='/tiles'
+                  path={`${process.env.PUBLIC_URL}/tiles`}
                   render={() => <MovieList movies={movies} />}
                 />
                 <Route
-                  path='/list'
+                  path={`${process.env.PUBLIC_URL}/list`}
                   render={() => <MovieSelectList movies={movies} />}
                 />
               </Switch>
