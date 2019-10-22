@@ -6,9 +6,10 @@ import './Header.css';
 const Header = props => (
   <div className="container">
     <div className="headerTitle">
-      <img className="title-icon" src="https://img.icons8.com/wired/50/000000/film-reel.png" alt="filem icon"/>
+      <img className="titleIcon" src="https://img.icons8.com/wired/50/000000/film-reel.png" alt="film icon"/>
       <div>{props.title}</div>
     </div>
+
   </div>
 );
 

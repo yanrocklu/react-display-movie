@@ -9,10 +9,9 @@ const MovieTile = (props) => {
   // So a workaround is change the http to https
   const httpToHttps = url => url.replace(/^http:\/\//i, 'https://');
 
-
   return (
     <div className="movie-card">
-      <img className="card-img-top" src={httpToHttps(movie.Poster)} alt="" />
+      <img className="card-img-top" src={httpToHttps(movie.Poster)} alt={movie.Poster} />
       <div className="card-body">
         <h2 className="card-title">{movie.Title}</h2>
         <h4 className="card-subtitle">{movie.Actors}</h4>

@@ -1,5 +1,5 @@
-{
-  "movies": [
+export const movies =
+  [
     {
       "Title": "Avatar",
       "Year": "2009",
@@ -470,4 +470,3 @@
       ]
     }
   ]
-}
