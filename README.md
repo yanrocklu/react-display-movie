@@ -8,29 +8,22 @@ https://yanrocklu.github.io/react-display-movie/
 
 ### Project Introduction
 
-This is a React web application that displays movies as a list of tiles. Each tile displays movie detail such as title, actors, description, poster.
+This is a React web application that displays movies as a list of tiles or dropdown list. 
 
-The application uses 2 levels nested components:
-* Header - A header that displays app title
-* MovieTilesContainer - The root conrainer component that manages state for all children components. It is uses _axio_ to connect to Firebase database.
-* MovieList - A list of movies
-* MovieTile - A tile to dispaly movie details
+This app has a navigation bar which is created with Material UI *Tabs* component, and React-Router
 
-**Axios**, a Promise based HTTP client is used to obtain movie data:
-* axios-movies - A axios instance that retrieves movie data from Firebase.
-
-**Firebase**, a NoSQL database is used to store the JSON style data
-
-**Flexbox**, the Flexible Box Layout Module is used to design flexible responsive layout structure.
+The select list is created with Material UI *Select* component.
 
 ### Developed With
 
 * [Node.js](https://nodejs.org/en/) - Javascript runtime
 * [React](https://reactjs.org/) - A javascript library for building user interfaces
+* [React Router](https://github.com/ReactTraining/react-router) - A popular declarative router for React
 * [Babel](https://babeljs.io/) - A transpiler for javascript
 * [Firebase](https://firebase.google.com//) - A NoSQL database
 * [Axios](https://www.axios.com/) - A HTTP client
 * [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp/) - CSS Flexbox Layout Module
+* [Material-UI](https://material-ui.com/) - React components for faster and easier web development.
 
 ---
 

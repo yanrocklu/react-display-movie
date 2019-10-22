@@ -50,18 +50,18 @@ class App extends Component {
             <Fragment>
               <Tabs value={location.pathname}>
                 <Tab label="Home" component={Link} to="/" value="/" />
-                <Tab label="Movie Select List" component={Link} to="/list" value="/list" />
                 <Tab label="Movie Tiles" component={Link} to="/tiles" value="/tiles" />
+                <Tab label="Movie Select List" component={Link} to="/list" value="/list" />
               </Tabs>
               <Switch>
                 <Route exact path='/' component={Home} />
                 <Route
-                  path='/list'
-                  render={() => <MovieSelectList movies={movies} />}
-                />
-                <Route
                   path='/tiles'
                   render={() => <MovieList movies={movies} />}
+                />
+                <Route
+                  path='/list'
+                  render={() => <MovieSelectList movies={movies} />}
                 />
               </Switch>
             </Fragment>
