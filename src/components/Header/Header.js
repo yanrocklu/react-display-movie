@@ -1,7 +1,6 @@
 import React from 'react';
 import './Header.css';
-// 'npm install --save prop-types' if want to use PropTypes
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Header = props => (
   <div className="container">
@@ -13,8 +12,8 @@ const Header = props => (
   </div>
 );
 
-// Header.propTypes = {
-//   name: PropTypes.string
-// };
+Header.propTypes = {
+  title: PropTypes.string.isRequired
+};
 
 export default Header;

@@ -11,11 +11,11 @@ const MovieTile = (props) => {
 
   return (
     <div className="movie-card">
-      <img className="card-img-top" src={httpToHttps(movie.Poster)} alt={movie.Poster} />
+      <img className="card-img-top" src={httpToHttps(movie.Poster)} alt={movie.Title + ' poster'} />
       <div className="card-body">
         <h2 className="card-title">{movie.Title}</h2>
         <h4 className="card-subtitle">{movie.Actors}</h4>
-        <p className="text-justify" style={{ fontSize: '14px' }}>{movie.Plot}</p>
+        <p className="text-justify">{movie.Plot}</p>
       </div>
     </div>
   );

@@ -19,6 +19,7 @@ The select list is created with Material UI *Select* component.
 * [Node.js](https://nodejs.org/en/) - Javascript runtime
 * [React](https://reactjs.org/) - A javascript library for building user interfaces
 * [React Router](https://github.com/ReactTraining/react-router) - A popular declarative router for React
+* [React PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html) - Runtime type checking for React props and similar objects.
 * [Babel](https://babeljs.io/) - A transpiler for javascript
 * [Firebase](https://firebase.google.com//) - A NoSQL database
 * [Axios](https://www.axios.com/) - A HTTP client
