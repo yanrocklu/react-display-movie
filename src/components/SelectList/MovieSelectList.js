@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -51,6 +52,15 @@ const MovieSelectList = (props) => {
       </FormControl>
     </div>
   );
+}
+
+MovieSelectList.propTypes = {
+  movies: PropTypes.arrayOf(PropTypes.shape({
+    Poster: PropTypes.string.isRequired,
+    Title: PropTypes.string.isRequired,
+    Actors: PropTypes.string.isRequired,
+    Plot: PropTypes.string.isRequired
+  })).isRequired
 }
 
 export default MovieSelectList;

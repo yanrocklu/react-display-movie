@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './MovieTile.css';
 
 const MovieTile = (props) => {
@@ -19,6 +21,15 @@ const MovieTile = (props) => {
       </div>
     </div>
   );
+}
+
+MovieTile.propTypes = {
+  movie: PropTypes.shape({
+    Poster: PropTypes.string.isRequired,
+    Title: PropTypes.string.isRequired,
+    Actors: PropTypes.string.isRequired,
+    Plot: PropTypes.string.isRequired
+  }).isRequired
 }
 
 export default MovieTile;
