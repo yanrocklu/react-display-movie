@@ -18,6 +18,10 @@ body {
   padding: 0;
   font-family: sans-serif;
   color: #212121;
+
+  /* When routing through different components, Movie Tiles page has a scrollbar at right, others don't. When moving from one component to another, the appearance of a scrollbar moves the page a few pixels to the side. */
+  /* to prevent scrollbar from repositioning web page */
+  overflow-y: scroll;
 }
 
 .App-header {

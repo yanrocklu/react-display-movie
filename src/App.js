@@ -9,6 +9,7 @@ import {
 
 import Header from './components/Header/Header';
 import MovieList from './components/Tiles/MovieList';
+import MovieTile from './components/Tiles/MovieTile';
 import MovieSelectList from './components/SelectList/MovieSelectList';
 import Home from './components/Home';
 
@@ -72,6 +73,7 @@ class App extends Component {
                   path="/list"
                   render={() => <MovieSelectList movies={movies} />}
                 />
+                <Route path={`/tiles/:imdbID`} component={MovieTile}/>
               </Switch>
             </Fragment>
           )}
