@@ -16,11 +16,6 @@ const MovieSelectList = (props) => {
     movieObj: '',
   });
 
-  // const [labelWidth, setLabelWidth] = React.useState(0);
-  // React.useEffect(() => {
-  //   setLabelWidth(inputLabel.current.offsetWidth);
-  // }, []);
-
   const handleChange = event => {
     setValues(oldValues => ({
       ...oldValues,
