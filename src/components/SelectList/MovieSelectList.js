@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import MovieCard from './MovieCard';
 
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -10,10 +11,9 @@ import './MovieSelectList.css';
 
 
 const MovieSelectList = (props) => {
-
   // use React Hooks
   const [values, setValues] = React.useState({
-    movieName: '',
+    movieObj: '',
   });
 
   // const [labelWidth, setLabelWidth] = React.useState(0);
@@ -28,28 +28,32 @@ const MovieSelectList = (props) => {
     }));
   };
 
-  const movieTitleList = props.movies.map(movie => movie.Title);
-  const dropDownOptions = movieTitleList.map((option, index) =>
-    <MenuItem value={option} key={index + option}>{option}</MenuItem>
+  const dropDownOptions = props.movies.map((movie, index) =>
+    <MenuItem value={movie} key={index + movie.imdbID}>
+      {movie.Title}
+    </MenuItem>
   );
-
 
   return (
     <div className="selectListContainer">
       <h3>Select a Movie Name to Display Details</h3>
-      <FormControl variant="outlined" style={{minWidth: 300}}>
+      <FormControl variant="outlined" style={{ minWidth: 300 }}>
         <InputLabel htmlFor="movie-name">Movies</InputLabel>
         <Select
-          value={values.movieName}
+          value={values.movieObj}
           onChange={handleChange}
           inputProps={{
-            name: 'movieName',
+            name: 'movieObj',
             id: 'movie-name',
           }}
         >
           {dropDownOptions}
         </Select>
       </FormControl>
+      <hr />
+      {values.movieObj &&
+        <MovieCard movie={values.movieObj} />
+      }
     </div>
   );
 }

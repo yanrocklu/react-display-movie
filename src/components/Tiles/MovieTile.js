@@ -9,7 +9,7 @@ const MovieTile = (props) => {
   // the poster img url in the json file are http, which will cause a '403 ERROR'.
   // That is a common setup to limit the amount of hotlinking to images (when people link directly to image files on other hosts). Hot-linking is often prevented, because it causes traffic without actually getting a site real visitors.
   // So a workaround is change the http to https
-  const httpToHttps = url => url.replace(/^http:\/\//i, 'https://');
+  const httpToHttps = url => (url || '').replace(/^http:\/\//i, 'https://');
 
   return (
     <div className="movie-card">

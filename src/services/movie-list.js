@@ -203,7 +203,7 @@ export const movies =
     },
     {
       "Title": "Vikings",
-      "Year": "2013–",
+      "Year": "2013",
       "Rated": "TV-14",
       "Released": "03 Mar 2013",
       "Runtime": "44 min",
