@@ -2,15 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MovieCard from './MovieCard';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch
-} from "react-router-dom";
-
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -24,7 +15,6 @@ const MovieSelectList = (props) => {
     movieObj: '',
   });
 
-  let { path, url } = useRouteMatch();
 
   const handleChange = event => {
     setValues(oldValues => ({
@@ -33,15 +23,9 @@ const MovieSelectList = (props) => {
     }));
   };
 
-  // const dropDownOptions = props.movies.map((movie, index) =>
-  //   <MenuItem value={movie} key={index + movie.imdbID}>
-  //     {movie.Title}
-  //   </MenuItem>
-  // );
-
-  const dropDownOptions = props.movies.map((movie) =>
-    <MenuItem value={movie} key={movie.imdbID}>
-      <Link className="selectLink" to={`${url}/${movie.imdbID}`}>{movie.Title}</Link>
+  const dropDownOptions = props.movies.map((movie, index) =>
+    <MenuItem value={movie} key={index + movie.imdbID}>
+      {movie.Title}
     </MenuItem>
   );
 
@@ -62,20 +46,9 @@ const MovieSelectList = (props) => {
         </Select>
       </FormControl>
       <hr />
-      {/* {values.movieObj &&
+      {values.movieObj &&
         <MovieCard movie={values.movieObj} />
-      } */}
-
-      <Switch>
-        <Route exact path={path}>
-          <h3>Please select a movie.</h3>
-        </Route>
-        {values.movieObj &&
-          <Route
-            path={`${path}/:movieImdbId`}
-            render={() => <MovieCard movie={values.movieObj} />}
-          />}
-      </Switch>
+      }
     </div>
   );
 }
