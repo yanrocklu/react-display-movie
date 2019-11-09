@@ -58,9 +58,9 @@ class App extends Component {
           render={({ location }) => (
             <Fragment>
               <Tabs value={location.pathname}>
-                <Tab label="Home" component={Link} to="/" value={location.pathname} />
-                <Tab label="Movie Tiles" component={Link} to="/tiles" value={location.pathname} />
-                <Tab label="Movie Select List" component={Link} to="/list" value={location.pathname} />
+                <Tab label="Home" component={Link} to="/" value="/" />
+                <Tab label="Movie Tiles" component={Link} to="/tiles" value="/tiles" />
+                <Tab label="Movie Select List" component={Link} to="/list" value="/list" />
               </Tabs>
               <Switch>
                 <Route exact path="/" component={Home} />
@@ -79,7 +79,6 @@ class App extends Component {
       </Router>
     );
   }
-
 }
 
 export default App;

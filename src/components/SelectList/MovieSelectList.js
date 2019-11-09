@@ -15,7 +15,6 @@ const MovieSelectList = (props) => {
     movieObj: '',
   });
 
-
   const handleChange = event => {
     setValues(oldValues => ({
       ...oldValues,
