@@ -9,7 +9,6 @@ import {
 
 import Header from './components/Header/Header';
 import MovieList from './components/Tiles/MovieList';
-import MovieTile from './components/Tiles/MovieTile';
 import MovieSelectList from './components/SelectList/MovieSelectList';
 import Home from './components/Home';
 
@@ -59,9 +58,9 @@ class App extends Component {
           render={({ location }) => (
             <Fragment>
               <Tabs value={location.pathname}>
-                <Tab label="Home" component={Link} to="/" value="/" />
-                <Tab label="Movie Tiles" component={Link} to="/tiles" value="/tiles" />
-                <Tab label="Movie Select List" component={Link} to="/list" value="/list" />
+                <Tab label="Home" component={Link} to="/" value={location.pathname} />
+                <Tab label="Movie Tiles" component={Link} to="/tiles" value={location.pathname} />
+                <Tab label="Movie Select List" component={Link} to="/list" value={location.pathname} />
               </Tabs>
               <Switch>
                 <Route exact path="/" component={Home} />
@@ -73,7 +72,6 @@ class App extends Component {
                   path="/list"
                   render={() => <MovieSelectList movies={movies} />}
                 />
-                <Route path={`/tiles/:imdbID`} component={MovieTile}/>
               </Switch>
             </Fragment>
           )}

@@ -18,13 +18,16 @@ import Select from '@material-ui/core/Select';
 
 import './MovieSelectList.css';
 
+
 const MovieSelectList = (props) => {
   // use React Hooks
   const [values, setValues] = React.useState({
-    movieObj: '',
+    movieObj: ''
+    // movieImdbId: ''
   });
 
   let { path, url } = useRouteMatch();
+  console.log('inside MovieSelectList, useRouteMatch() = ' + JSON.stringify(useRouteMatch()));
 
   const handleChange = event => {
     setValues(oldValues => ({
@@ -39,9 +42,10 @@ const MovieSelectList = (props) => {
   //   </MenuItem>
   // );
 
-  const dropDownOptions = props.movies.map((movie) =>
+  const dropDownOptions = props.movies.map(movie =>
     <MenuItem value={movie} key={movie.imdbID}>
       <Link className="selectLink" to={`${url}/${movie.imdbID}`}>{movie.Title}</Link>
+      {/* <Link className="selectLink" to={`${url}/${values.movieImdbId}`}>{movie.Title}</Link> */}
     </MenuItem>
   );
 
@@ -72,7 +76,7 @@ const MovieSelectList = (props) => {
         </Route>
         {values.movieObj &&
           <Route
-            path={`${path}/:movieImdbId`}
+            path={`${path}/:imdbId`}
             render={() => <MovieCard movie={values.movieObj} />}
           />}
       </Switch>
