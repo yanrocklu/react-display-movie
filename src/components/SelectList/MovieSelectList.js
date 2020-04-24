@@ -22,11 +22,22 @@ const MovieSelectList = (props) => {
     }));
   };
 
+  const handleChangeInput = event => {
+    setValues(oldValues => ({
+      ...oldValues,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
   const dropDownOptions = props.movies.map((movie, index) =>
     <MenuItem value={movie} key={index + movie.imdbID}>
       {movie.Title}
     </MenuItem>
   );
+
+  const inputOptions = props.movies.map((movie, index) => {
+    return <option value={movie.Title} key={index + movie.Title} />
+  });
 
   return (
     <div className="selectListContainer">
@@ -48,6 +59,15 @@ const MovieSelectList = (props) => {
       {values.movieObj &&
         <MovieCard movie={values.movieObj} />
       }
+      <hr />
+      <form >
+        <input list="browsers" name="browser" type="search" placeholder="Search" aria-label="Search"
+          onChange={handleChangeInput}
+        />
+        <datalist id="browsers">
+          {inputOptions}
+        </datalist>
+      </form>
     </div>
   );
 }
