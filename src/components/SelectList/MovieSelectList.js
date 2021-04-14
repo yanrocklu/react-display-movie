@@ -64,14 +64,14 @@ const MovieSelectList = (props) => {
         <MovieCard movie={values.movieObj} />
       }
       <hr />
-      <form >
+      {/* <form >
         <input list="browsers" name="browser" type="search" placeholder="Search" aria-label="Search"
           onChange={handleChangeInput}
         />
         <datalist id="browsers">
           {inputOptions}
         </datalist>
-      </form>
+      </form> */}
     </div>
   );
 }
