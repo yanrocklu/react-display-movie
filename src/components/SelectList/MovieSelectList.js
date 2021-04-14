@@ -38,7 +38,9 @@ const MovieSelectList = (props) => {
   });
 
   const inputOptions = props.movies.map((movie, index) => {
-    return <option value={movie.Title} key={index + movie.Title} />
+    if (movie) {
+      return <option value={movie.Title} key={index + movie.Title} />
+    }
   });
 
   return (
