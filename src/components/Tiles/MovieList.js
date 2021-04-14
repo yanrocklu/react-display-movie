@@ -6,7 +6,9 @@ import './MovieList.css';
 
 const MovieList = (props) => {
   const movieList = props.movies.map((movie, index) => {
-    return <MovieTile movie={movie} key={index + movie.Title} />
+    if (movie) {
+      return <MovieTile movie={movie} key={index + movie.Title} />
+    }
   });
 
   return (

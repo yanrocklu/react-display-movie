@@ -29,11 +29,13 @@ const MovieSelectList = (props) => {
     }));
   };
 
-  const dropDownOptions = props.movies.map((movie, index) =>
-    <MenuItem value={movie} key={index + movie.imdbID}>
-      {movie.Title}
-    </MenuItem>
-  );
+  const dropDownOptions = props.movies.map((movie, index) => {
+    if (movie) {
+      return <MenuItem value={movie} key={index + movie.imdbID}>
+        {movie.Title}
+      </MenuItem>
+    }
+  });
 
   const inputOptions = props.movies.map((movie, index) => {
     return <option value={movie.Title} key={index + movie.Title} />
